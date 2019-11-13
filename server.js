@@ -25,8 +25,6 @@ var server = http.createServer(function (request, response) {
 
     if (path === '/') {
         var string = fs.readFileSync('./index.html', 'utf8')
-        var amount = fs.readFileSync('./database', 'utf8')
-        string = string.replace('&&&amount&&&', amount)
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
         response.write(string)
@@ -37,8 +35,8 @@ var server = http.createServer(function (request, response) {
         response.setHeader('Content-Type', 'text/css')
         response.write(string)
         response.end()
-    } else if (path === '/main.js') {
-        var string = fs.readFileSync('./main.js', 'utf8')
+    } else if (path === '/jQuery-AJAX-Promise.js') { //请修改对应的JS路径和文件名
+        var string = fs.readFileSync('./jQuery-AJAX-Promise.js', 'utf8') //请修改对应的JS路径和文件名
         response.statusCode = 200
         response.setHeader('Content-Type', 'application/javascript')
         response.write(string)
