@@ -14,4 +14,4 @@ Use an upgraded version of Promise. Like this:<br>
 `jQuery.ajax({url, method, body}).then(success, fail)`
 ### Using CORS Cross-Domain
 `response.setHeader('Access-Control-Allow-Origin', 'http://sgs.com:8000')`<br><br>
-Please configure your own JS file and hosts file.
+Please configure your own JS file and html file and hosts file.
